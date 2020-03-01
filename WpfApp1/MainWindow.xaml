@@ -6,8 +6,9 @@
         xmlns:local="clr-namespace:WpfApp1"
         mc:Ignorable="d"
         Title="FirstApp" Height="450" Width="800">
+    <!-- XAML extensiable application markup language -->
     <Grid>
         <TextBlock HorizontalAlignment="Left" Margin="351,188,0,0" TextWrapping="Wrap" Text="Hello new user " VerticalAlignment="Top" RenderTransformOrigin="-0.393,0.915" Height="41" Width="81"/>
-
+        <Button Content="Click me!" Height="100" Width="100" Margin="332,229,360,90"></Button>
     </Grid>
 </Window>
