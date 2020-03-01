@@ -11,6 +11,7 @@
         <TextBlock HorizontalAlignment="Left" Margin="351,188,0,0" TextWrapping="Wrap" Text="Hello new user " VerticalAlignment="Top" RenderTransformOrigin="-0.393,0.915" Height="41" Width="81"/>
         <Button Content="Click me!" Height="100" Width="100" FontSize="20" Margin="554,214,138,105" />
         <Button Content="Click here!" Height="70" Width="200" Margin="80,244,512,105"/>
+        <!-- 
         <Button>
             <Button.FontSize>50</Button.FontSize>
             <Button.Height>300</Button.Height>
@@ -23,5 +24,6 @@
                 </WrapPanel>
             </Button.Content>
         </Button>
+        -->
     </Grid>
 </Window>
