@@ -19,6 +19,16 @@ namespace WpfApp1
     /// Interaction logic for MainWindow.xaml
     /// </summary>
   public partial class MainWindow : Window {
+
+    //custom dependency property 
+    public int MyProperty
+    {
+      get { return (int)GetValue(MyDependencyProperty);  }
+      set { SetValue(MyDependencyProperty, value); }
+    }
+
+    public static readonly DependencyProperty MyDependencyProperty =
+      DependencyProperty.Register("MyProperty", typeof(int), typeof(MainWindow), new PropertyMetadata(0));
     public MainWindow() {
       InitializeComponent();
       //Grid grid = new Grid();
@@ -46,6 +56,8 @@ namespace WpfApp1
 
       //btn.Content = wrapPanel;
       //grid.Children.Add(btn);
+
+
     }
 
     private void Button_Click(object sender, RoutedEventArgs e) {
