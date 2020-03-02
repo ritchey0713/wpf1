@@ -34,8 +34,8 @@ namespace WpfApp1
     public MainWindow() {
       InitializeComponent();
 
-      sumObj = new Sum { Num1 = "1", Num2 = "10" };
-      this.DataContext = sumObj;
+      //sumObj = new Sum { Num1 = "1", Num2 = "10" };
+      //this.DataContext = sumObj;
 
       //Grid grid = new Grid();
       //this.Content = grid;
@@ -66,7 +66,16 @@ namespace WpfApp1
       //MySlider.Value = 30;
       //MyTextBox.Text = MySlider.Value.ToString();
 
+      List<Match> matches = new List<Match>();
 
+      matches.Add(new Match() { Team1 = "Cloud 9", Team2 = "CLG", Score1 = 10, Score2 = 8, Completion = 22});
+      matches.Add(new Match() { Team1 = "Liquid", Team2 = "TSM", Score1 = 37, Score2 = 49, Completion = 84 });
+      matches.Add(new Match() { Team1 = "100 Theives", Team2 = "FlyQuest", Score1 = 22, Score2 = 67, Completion = 100 });
+      matches.Add(new Match() { Team1 = "Evil Geniuses", Team2 = "Immortals", Score1 = 1, Score2 = 1, Completion = 10 });
+      matches.Add(new Match() { Team1 = "Dignitas", Team2 = "Golden Guardians", Score1 = 55, Score2 = 51, Completion = 100 });
+
+      // itemssource is where the listbox gets its list of data
+      lbMatches.ItemsSource = matches;
     }
 
     public class Match
@@ -93,6 +102,19 @@ namespace WpfApp1
     // tunneling event
     private void Button_PreviewMouseUp(object sender, MouseButtonEventArgs e) {
       MessageBox.Show("Released event!");
+    }
+
+    private void Button_Click_1(object sender, RoutedEventArgs e)
+    {
+      if(lbMatches.SelectedItem != null)
+      {
+        MessageBox.Show("Selected match: " +
+          // use as keyword to access the Match class methods
+         (lbMatches.SelectedItem as Match).Team1 + " " +
+           (lbMatches.SelectedItem as Match).Score1 + " " +
+           (lbMatches.SelectedItem as Match).Team2 + " " +
+           (lbMatches.SelectedItem as Match).Score2 + " ");
+      }
     }
   }
 }
