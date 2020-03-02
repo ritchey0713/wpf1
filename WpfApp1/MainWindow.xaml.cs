@@ -52,5 +52,12 @@ namespace WpfApp1
       MessageBox.Show("Thanks for finding me!");
 
     }
+    private void Button_MouseUp(object sender, MouseButtonEventArgs e) {
+      MessageBox.Show("You released me!");
+    }
+
+    private void Button_PreviewMouseUp(object sender, MouseButtonEventArgs e) {
+      MessageBox.Show("Released event!");
+    }
   }
 }

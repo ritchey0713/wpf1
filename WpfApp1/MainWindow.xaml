@@ -34,7 +34,10 @@
             <ListBoxItem Content="Item 3"/>
         </ListBox>
 
-        <Button Content="Click me!" Click="Button_Click" Margin="20"></Button>
+              <!-- direct event, click event-->
+        <Button Content="Click me!" Click="Button_Click" Width="100" Height="50" Margin="20"></Button>
+        <!-- bubble event -->
+        <Button Content="or click me!" PreviewMouseUp="Button_PreviewMouseUp" Width="100" Height="50" Margin="20"></Button>
     </StackPanel>
 
 </Window>
