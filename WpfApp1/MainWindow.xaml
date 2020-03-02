@@ -74,8 +74,9 @@
                     </Style>
                 </Button.Style>
             </Button>-->
-            <TextBox Width="100" Margin="50" Text="{Binding ElementName=MySlider, Path=Value, Mode=OneWay}"></TextBox>
-        <Slider Minimum="0" Maximum="100" Name="MySlider"/>
+            <!-- text box is target, slider is binding source-->
+            <TextBox Width="100" Margin="50" Text="{Binding ElementName=MySlider, Path=Value, Mode=TwoWay}"></TextBox>
+            <Slider IsSnapToTickEnabled="True" Minimum="0" Maximum="100" Name="MySlider"/>
     </StackPanel>
       
    
