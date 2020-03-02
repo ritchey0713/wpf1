@@ -29,6 +29,21 @@ namespace WpfApp1
       WrapPanel wrapPanel = new WrapPanel();
       TextBlock txt = new TextBlock();
       txt.Text = "Multi";
+      txt.Foreground = Brushes.Blue;
+      wrapPanel.Children.Add(txt);
+
+      TextBlock txt2 = new TextBlock();
+      txt2.Text = "Color";
+      txt2.Foreground = Brushes.Red;
+      wrapPanel.Children.Add(txt2);
+
+      TextBlock txt3 = new TextBlock();
+      txt3.Text = "Button";
+      txt3.Foreground = Brushes.Green;
+      wrapPanel.Children.Add(txt3);
+
+      btn.Content = wrapPanel;
+      grid.Children.Add(btn);
     }
   }
 }
