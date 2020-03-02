@@ -25,7 +25,6 @@
             </Button.Content>
         </Button>
     </Grid>
-        -->
     <StackPanel>
         <TextBlock HorizontalAlignment="Center" Margin="20">Hello!</TextBlock>
         <ListBox Height="100" Width="100">
@@ -34,10 +33,21 @@
             <ListBoxItem Content="Item 3"/>
         </ListBox>
 
+        -->
+   
               <!-- direct event, click event-->
-        <Button Content="Click me!" Click="Button_Click" Width="100" Height="50" Margin="20"></Button>
+        <!--Button Content="Click me!" Click="Button_Click" Width="100" Height="50" Margin="20"></-->
         <!-- bubble event -->
-        <Button Content="or click me!" PreviewMouseUp="Button_PreviewMouseUp" Width="100" Height="50" Margin="20"></Button>
-    </StackPanel>
+        <!--Button Content="or click me!" PreviewMouseUp="Button_PreviewMouseUp" Width="100" Height="50" Margin="20"></>
+    </StackPanel-->
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="100" />
+        </Grid.ColumnDefinitions>
+        <Button Content="Hello there " Grid.Column="0"/>
+        <Button Content="Hello" Grid.Column="1"/>
+    </Grid>
 
 </Window>
