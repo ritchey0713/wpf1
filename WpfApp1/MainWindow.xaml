@@ -75,8 +75,16 @@
                 </Button.Style>
             </Button>-->
             <!-- text box is target, slider is binding source-->
-            <TextBox Name="MyTextBox" Width="100" Margin="50" Text="{Binding ElementName=MySlider, Path=Value, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"></TextBox>
-            <Slider IsSnapToTickEnabled="True" Minimum="0" Maximum="100" Name="MySlider"/>
+            <!--<TextBox Name="MyTextBox" Width="100" Margin="50" Text="{Binding ElementName=MySlider, Path=Value, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"></TextBox>
+            <Slider IsSnapToTickEnabled="True" Minimum="0" Maximum="100" Name="MySlider"/>-->
+        <Label Content="num1"/>
+        <TextBox Width="100" Height="30" Text="{Binding Path=Num1, Mode=TwoWay}" />
+
+        <Label Content="num2"/>
+        <TextBox Width="100" Height="30" Text="{Binding Path=Num2, Mode=TwoWay}" />
+
+        <Label Content="Num3"/>
+        <TextBox Width="100" Height="30" Text="{Binding Path=Result, Mode=TwoWay}" />
     </StackPanel>
       
    

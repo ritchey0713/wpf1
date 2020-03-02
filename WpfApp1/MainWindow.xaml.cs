@@ -29,8 +29,14 @@ namespace WpfApp1
 
     public static readonly DependencyProperty MyDependencyProperty =
       DependencyProperty.Register("MyProperty", typeof(int), typeof(MainWindow), new PropertyMetadata(0));
+
+    public Sum sumObj { get; set;}
     public MainWindow() {
       InitializeComponent();
+
+      sumObj = new Sum { Num1 = "1", Num2 = "10" };
+      this.DataContext = sumObj;
+
       //Grid grid = new Grid();
       //this.Content = grid;
       //Button btn = new Button();
@@ -57,11 +63,13 @@ namespace WpfApp1
       //btn.Content = wrapPanel;
       //grid.Children.Add(btn);
 
-      MySlider.Value = 30;
-      MyTextBox.Text = MySlider.Value.ToString();
+      //MySlider.Value = 30;
+      //MyTextBox.Text = MySlider.Value.ToString();
 
 
     }
+
+
 
     private void Button_Click(object sender, RoutedEventArgs e) {
       MessageBox.Show("Thanks for finding me!");
