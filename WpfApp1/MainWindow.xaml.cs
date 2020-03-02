@@ -57,6 +57,9 @@ namespace WpfApp1
       //btn.Content = wrapPanel;
       //grid.Children.Add(btn);
 
+      MySlider.Value = 30;
+      MyTextBox.Text = MySlider.Value.ToString();
+
 
     }
 
