@@ -41,7 +41,7 @@
     <!--Button Content="or click me!" PreviewMouseUp="Button_PreviewMouseUp" Width="100" Height="50" Margin="20"></>
     </StackPanel-->
 
-    <Grid>
+    <StackPanel>
         <!--<Grid.ColumnDefinitions>
                 <ColumnDefinition Width="2*"/>
                 <ColumnDefinition Width="2*" />
@@ -87,7 +87,7 @@
         <TextBox Width="100" Height="30" Text="{Binding Path=Result, Mode=TwoWay}" />-->
 
         <!-- matches app -->
-        <Grid.ColumnDefinitions>
+        <!--<Grid.ColumnDefinitions>
             <ColumnDefinition />
             <ColumnDefinition Width="100" />
         </Grid.ColumnDefinitions>
@@ -116,8 +116,19 @@
                 </DataTemplate>
             </ListBox.ItemTemplate>
         </ListBox>
-        <Button Grid.Column="1" Click="Button_Click_1">Show Slected</Button>
-    </Grid>
+        <Button Grid.Column="1" Click="Button_Click_1">Show Slected</Button>-->
+
+        <ComboBox Name="ComboBoxColors">
+            <ComboBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Orientation="Horizontal">
+                        <Rectangle Fill="{Binding Name}"></Rectangle>
+                        <TextBlock Text="{Binding Name}" FontSize="32"/>
+                    </StackPanel>
+                </DataTemplate>
+            </ComboBox.ItemTemplate>
+        </ComboBox>
+    </StackPanel>
 
 
 

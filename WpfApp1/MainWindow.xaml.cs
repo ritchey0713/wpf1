@@ -66,6 +66,8 @@ namespace WpfApp1
       //MySlider.Value = 30;
       //MyTextBox.Text = MySlider.Value.ToString();
 
+      ComboBoxColors.ItemsSource = typeof(Colors).GetProperties();
+
       List<Match> matches = new List<Match>();
 
       matches.Add(new Match() { Team1 = "Cloud 9", Team2 = "CLG", Score1 = 10, Score2 = 8, Completion = 22});
@@ -75,7 +77,7 @@ namespace WpfApp1
       matches.Add(new Match() { Team1 = "Dignitas", Team2 = "Golden Guardians", Score1 = 55, Score2 = 51, Completion = 100 });
 
       // itemssource is where the listbox gets its list of data
-      lbMatches.ItemsSource = matches;
+      //lbMatches.ItemsSource = matches;
     }
 
     public class Match
@@ -104,17 +106,17 @@ namespace WpfApp1
       MessageBox.Show("Released event!");
     }
 
-    private void Button_Click_1(object sender, RoutedEventArgs e)
-    {
-      if(lbMatches.SelectedItem != null)
-      {
-        MessageBox.Show("Selected match: " +
-          // use as keyword to access the Match class methods
-         (lbMatches.SelectedItem as Match).Team1 + " " +
-           (lbMatches.SelectedItem as Match).Score1 + " " +
-           (lbMatches.SelectedItem as Match).Team2 + " " +
-           (lbMatches.SelectedItem as Match).Score2 + " ");
-      }
+    //private void Button_Click_1(object sender, RoutedEventArgs e)
+    //{
+    //  if(lbMatches.SelectedItem != null)
+    //  {
+    //    MessageBox.Show("Selected match: " +
+    //      // use as keyword to access the Match class methods
+    //     (lbMatches.SelectedItem as Match).Team1 + " " +
+    //       (lbMatches.SelectedItem as Match).Score1 + " " +
+    //       (lbMatches.SelectedItem as Match).Team2 + " " +
+    //       (lbMatches.SelectedItem as Match).Score2 + " ");
+    //  }
     }
   }
 }
