@@ -232,6 +232,12 @@
                 </TextBlock.Style>
             </TextBlock>
         </StackPanel>
+            <Label Content="Username" />
+            <TextBox Name="Username"></TextBox>
+
+            <Label Content="Password" />
+            <PasswordBox PasswordChar="*" ></PasswordBox>
+            <Button Margin="5" Content="Login" Click="Button_Click_1"></Button>
     </StackPanel>
 
 </Window>

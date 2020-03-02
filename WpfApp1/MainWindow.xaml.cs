@@ -101,6 +101,11 @@ namespace WpfApp1
       MessageBox.Show("You released me!");
     }
 
+    private void Button_Click_1(object sender, RoutedEventArgs e)
+    {
+      MessageBox.Show("Welcome " + Username.Text);
+    }
+
     // tunneling event
     //private void Button_PreviewMouseUp(object sender, MouseButtonEventArgs e) {
     //  MessageBox.Show("Released event!");
