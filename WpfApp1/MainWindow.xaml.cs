@@ -66,7 +66,7 @@ namespace WpfApp1
       //MySlider.Value = 30;
       //MyTextBox.Text = MySlider.Value.ToString();
 
-      ComboBoxColors.ItemsSource = typeof(Colors).GetProperties();
+      //ComboBoxColors.ItemsSource = typeof(Colors).GetProperties();
 
       List<Match> matches = new List<Match>();
 
@@ -102,9 +102,40 @@ namespace WpfApp1
     }
 
     // tunneling event
-    private void Button_PreviewMouseUp(object sender, MouseButtonEventArgs e) {
-      MessageBox.Show("Released event!");
-    }
+    //private void Button_PreviewMouseUp(object sender, MouseButtonEventArgs e) {
+    //  MessageBox.Show("Released event!");
+    //}
+
+    //private void RadioButton_Checked(object sender, RoutedEventArgs e)
+    //{
+    //  MessageBox.Show("Please tell me!");
+    //}
+
+    //private void RadioButton_Checked_1(object sender, RoutedEventArgs e)
+    //{
+    //  MessageBox.Show("Fine keep your secrets!");
+    //}
+
+    //private void OnAllCheckedBox(object sender, RoutedEventArgs e)
+    //{
+    //  bool newVal = (AllToppings.IsChecked == true);
+    //  Salami.IsChecked = newVal;
+    //  Mushrooms.IsChecked = newVal;
+    //  Peppers.IsChecked = newVal;
+    //}
+
+    //private void SingleCheckChanged(object sender, RoutedEventArgs e)
+    //{
+    //  AllToppings.IsChecked = null;
+    //  if(Salami.IsChecked == true && Mushrooms.IsChecked == true && Peppers.IsChecked == true)
+    //  {
+    //    AllToppings.IsChecked = true;
+    //  }
+    //  if (Salami.IsChecked == false && Mushrooms.IsChecked == false && Peppers.IsChecked == false)
+    //  {
+    //    AllToppings.IsChecked = false;
+    //  }
+    //}
 
     //private void Button_Click_1(object sender, RoutedEventArgs e)
     //{
@@ -117,6 +148,6 @@ namespace WpfApp1
     //       (lbMatches.SelectedItem as Match).Team2 + " " +
     //       (lbMatches.SelectedItem as Match).Score2 + " ");
     //  }
-    }
+    //}
   }
 }

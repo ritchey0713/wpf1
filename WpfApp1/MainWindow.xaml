@@ -41,7 +41,7 @@
     <!--Button Content="or click me!" PreviewMouseUp="Button_PreviewMouseUp" Width="100" Height="50" Margin="20"></>
     </StackPanel-->
 
-    <StackPanel>
+    <StackPanel Margin="15">
         <!--<Grid.ColumnDefinitions>
                 <ColumnDefinition Width="2*"/>
                 <ColumnDefinition Width="2*" />
@@ -118,20 +118,109 @@
         </ListBox>
         <Button Grid.Column="1" Click="Button_Click_1">Show Slected</Button>-->
 
-        <ComboBox Name="ComboBoxColors">
+        <!--<ComboBox Name="ComboBoxColors">
             <ComboBox.ItemTemplate>
                 <DataTemplate>
                     <StackPanel Orientation="Horizontal">
-                        <Rectangle Fill="{Binding Name}"></Rectangle>
+                        <Rectangle Fill="{Binding Name}" Width="25" Height="25" Margin="5"></Rectangle>
                         <TextBlock Text="{Binding Name}" FontSize="32"/>
                     </StackPanel>
                 </DataTemplate>
             </ComboBox.ItemTemplate>
-        </ComboBox>
+        </ComboBox>-->
+
+        <!--<Label FontWeight="Bold">Toppings</Label>
+        <CheckBox Name="AllToppings" IsThreeState="True" Checked="OnAllCheckedBox" Unchecked="OnAllCheckedBox">Add all</CheckBox>
+        <StackPanel Margin="15">
+            <CheckBox Name="Salami" Checked="SingleCheckChanged" Unchecked="SingleCheckChanged">
+                <TextBlock>
+                    Salami <Run Foreground="Red" FontWeight="Bold"> Spicy</Run>
+                </TextBlock>
+            </CheckBox>
+
+            <CheckBox Name="Mushrooms" Checked="SingleCheckChanged" Unchecked="SingleCheckChanged">Mushrooms</CheckBox>
+            <CheckBox Name="Peppers" Checked="SingleCheckChanged" Unchecked="SingleCheckChanged">Peppers</CheckBox>
+            <Button ToolTip="click here to do stuff!" Width="100" Height="50" Content="Hover for help"/>
+        </StackPanel>-->
+        <!--<Label FontWeight="Bold" FontSize="20">Do you like this?</Label>
+        <RadioButton Margin="10">
+            <WrapPanel>
+                <Rectangle Fill="Green" Width="18" Height="18"></Rectangle>
+                <TextBlock Margin="5,0,0,0" Text="Yes" Foreground="Green"></TextBlock>
+            </WrapPanel>
+        </RadioButton>
+        
+        <RadioButton Margin="10" Checked="RadioButton_Checked_1">
+            <WrapPanel>
+                <Rectangle Fill="Red" Width="18" Height="18"></Rectangle>
+                <TextBlock Margin="5,0,0,0" Text="No" Foreground="Red"></TextBlock>
+            </WrapPanel>
+        </RadioButton>
+        
+        <RadioButton Margin="10" IsChecked="True" Checked="RadioButton_Checked">
+            <WrapPanel>
+                <Image Width="50" Height="50" Source="C:\Users\ritch\OneDrive\Desktop\Images\leo.png"></Image>
+                <TextBlock Margin="5,0,0,0" Text="Maybe" Foreground="Black"></TextBlock>
+            </WrapPanel>
+        </RadioButton>-->
+
+        <Grid>
+            <TextBlock Text="Hello there!" FontSize="32" HorizontalAlignment="Center" VerticalAlignment="Center">
+                <TextBlock.Style>
+                    <!-- tell the style what type of data to target-->
+                    <Style TargetType="TextBlock">
+                        <Setter Property="Foreground" Value="Green"></Setter>
+                        <Style.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Foreground" Value="Red"></Setter>
+                                <Setter Property="TextDecorations" Value="Underline"></Setter>
+                            </Trigger>
+                        </Style.Triggers>
+                    </Style>
+                </TextBlock.Style>
+            </TextBlock>
+        </Grid>
+
+        <Grid>
+            <TextBlock Text="Hello guy!" FontSize="24" HorizontalAlignment="Center" VerticalAlignment="Center">
+                <TextBlock.Style>
+                    <Style TargetType="TextBlock">
+                        <Style.Triggers>
+                            <EventTrigger RoutedEvent="MouseEnter">
+                                <EventTrigger.Actions>
+                                    <BeginStoryboard>
+                                        <Storyboard>
+                                            <DoubleAnimation Duration="0:0:0.500" 
+                                                             Storyboard.TargetProperty="FontSize"
+                                                             To="72"/>
+                                        </Storyboard>
+                                    </BeginStoryboard>
+                                </EventTrigger.Actions>
+                            </EventTrigger>
+                            
+                            <EventTrigger RoutedEvent="MouseLeave">
+                                <EventTrigger.Actions>
+                                    <BeginStoryboard>
+                                        <Storyboard>
+                                            <DoubleAnimation Duration="0:0:0.300"
+                                                             Storyboard.TargetProperty="FontSize"
+                                                             To="24" />
+                                        </Storyboard>
+                                    </BeginStoryboard>
+                                </EventTrigger.Actions>
+                            </EventTrigger>
+                            
+                        </Style.Triggers>
+                    </Style>
+                </TextBlock.Style>
+            </TextBlock>
+        </Grid>
+        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+            <CheckBox Name="Hello" Content="Is someone there?"/>
+            <TextBlock FontSize="36">
+                
+            </TextBlock>
+        </StackPanel>
     </StackPanel>
-
-
-
-
 
 </Window>
