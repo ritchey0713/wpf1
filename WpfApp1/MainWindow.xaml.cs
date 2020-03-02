@@ -52,10 +52,13 @@ namespace WpfApp1
       MessageBox.Show("Thanks for finding me!");
 
     }
+
+    // bubbling event
     private void Button_MouseUp(object sender, MouseButtonEventArgs e) {
       MessageBox.Show("You released me!");
     }
 
+    // tunneling event
     private void Button_PreviewMouseUp(object sender, MouseButtonEventArgs e) {
       MessageBox.Show("Released event!");
     }
